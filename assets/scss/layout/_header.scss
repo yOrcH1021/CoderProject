@@ -1,0 +1,88 @@
+
+/* HEADER */
+header {
+    background-color: $white;
+    position: sticky;
+    padding: 0 16px;
+    height: 50px;
+    z-index: 2;
+    top: 0;
+	.navbar {
+    	padding: 0;
+    	.container-fluid {
+    		padding: 0;
+    	}
+	}
+	.navbar-brand {
+		img {
+			height: 25px;
+		}
+	}
+	.navbar-toggler {
+	    @extend .button;
+	    padding: 0 !important;
+	    box-shadow: none !important;
+		&:hover {
+			background-color: $black;
+		    span {
+		    	transform: rotate(90deg);
+		    	color: $white;
+			}
+		}
+		span {
+			font-size: 15px
+		}
+		.open {
+		    display: none;
+		}
+		.close {
+		    display: block;
+		}
+		&.collapsed {
+			.open {
+			    display: block;
+			}
+			.close {
+		    	display: none;
+			}
+			&:hover {
+				span {
+				    transform: rotate(0deg);
+				}
+			}
+		}
+	}
+	.menu {
+	    position: fixed;
+	    width: 100%;
+	    height: 100%;
+	    top: 0;
+	    left: 0;
+	    background-color: rgba(0,0,0,0.25);
+	    display: flex;
+	    justify-content: flex-end;
+	    transition: all 0s;
+		&__list {
+		    width: 75%;
+		    height: 100%;
+		    background-color: $white;
+		    justify-content: center;
+		    flex-direction: column;
+		    display: flex;
+		}
+		&__item {
+		    text-align: center;
+		    display: flex;
+		    justify-content: center;
+		}
+		&__link {
+		    color: $black;
+			&:hover {
+			    color: $orange;
+			}
+			&--active {
+			    color: $blue;
+			}
+		}
+	}
+}

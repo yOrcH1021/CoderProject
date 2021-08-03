@@ -1,0 +1,11 @@
+
+/* HOME */
+#home {
+	.container {
+		display: flex;
+        section {
+            @include main();
+        }
+    }
+}
+	

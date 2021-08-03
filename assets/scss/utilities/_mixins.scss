@@ -1,0 +1,48 @@
+
+/* MIXINS */
+@mixin main ($order: left) {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    > div {
+        width: 100%;
+    }
+    .textWrap {
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+        margin-top: 32px;
+    }
+    .imageWrap {
+        text-align: left;
+        padding-left: 0;
+    }
+    @if $order == right {
+        .textWrap {
+            padding-left: 0;
+            order: 1;
+        }
+    }
+    @media only screen and (min-width: 992px) {
+        flex-direction: row;
+        > div {
+            width: 50%;
+        }
+        .textWrap {
+            text-align: left;
+            margin-top: 0;
+        }
+        .imageWrap {
+            padding-left: 32px;
+        }
+        @if $order == right {
+            .textWrap {
+                padding-left: 32px;
+                order: 2;
+            }
+            .imageWrap {
+                padding-left: 0;
+            }
+        }
+    }
+}

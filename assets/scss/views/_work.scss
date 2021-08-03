@@ -1,0 +1,29 @@
+
+/* WORK */
+#work {
+	.container {
+		section {
+			@include main(right);
+		}
+		.workList {
+		    display: inline-block;
+		    width: 100%;
+		    margin-bottom: 32px;
+		    margin-top: 10px;
+			&__item {
+			    position: relative;
+			    width: 100%;
+			    float: left;
+			    display: flex;
+			    justify-content: center;
+			    margin-top: 22px;
+			}
+			&__paragraph {
+			    display: flex;
+			    align-items: center;
+			    justify-content: center;
+			    margin-top: 10px;
+			}
+		}
+	}
+}

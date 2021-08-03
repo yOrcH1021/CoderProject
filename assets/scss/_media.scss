@@ -1,0 +1,251 @@
+
+/* MEDIA QUERIES */
+@media only screen and (min-width: 768px) {
+
+    /* HEADER */
+    header {
+        height: 100px;
+	    .navbar-brand {
+		    img {
+		        height: 50px;
+		    }
+	    }
+	    .navbar-toggler {
+	        height: 50px;
+	        width: 50px;
+		    span {
+		        font-size: 24px;
+		    }
+	    }
+	    .menu {
+		    &__list {
+		        width: 50%;
+		    }
+		    &__link {
+		        font-size: 42px;
+		    }
+	    }
+    }
+
+    /* FOOTER */
+    .footerBlock {
+        justify-content: space-between;
+        flex-direction: row;
+        height: 50px;
+    }
+
+}
+
+@media only screen and (min-width: 992px) {
+
+    /* CLASSES */
+    .form-check {
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    /* GENERAL STYLES */
+    h1 {
+        font-size: 42px;
+        margin-bottom: 0;
+    }
+
+    /* HOME */
+    #home {
+	    .container {
+		    .imageWrap {
+		        margin-bottom: 0;
+		        overflow: hidden;
+		        position: relative;
+		        width: 50%;
+		        height: 100%;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				.logoCss {
+					top: 60px;
+					transform: scale(1);
+					left: 0;
+					&:hover {
+						transform: rotate(15deg);
+						.hand {
+							opacity: 1;
+							&__one {
+								bottom: 85px;
+								left: -20px;
+							}
+						}
+					}
+				}
+		    }
+    	}
+    }
+
+    /* WORK */
+    #work {
+	    .container {
+	    	section {
+		    	&:first-child {
+					height: calc(100vh - 150px);
+	    		}
+			}
+		    .workList {
+		        margin-top: 0;
+		        display: grid;
+		        grid-gap: 2px;
+		        grid-template-columns: repeat(4, 1fr);
+		        grid-template-rows: repeat(3, 1fr);
+		        grid-template-areas: " work1 work1 work2 work3 "
+		                             " work4 work5 work5 work6 "
+		                             " work7 work8 work9 work9 ";
+			    &__item {
+			        width: 100%;
+			        overflow: hidden;
+			        margin: 0;
+				    &:hover {
+					    img {
+					        opacity: 0.25;
+					        transform: scale(1.1) rotate(4deg);
+					    }
+					    p {
+					        display: block;
+					    }
+				    }
+				    &--1 {
+				        grid-area: work1;
+				    }
+
+				    &--2 {
+				        grid-area: work2;
+				    }
+
+				    &--3 {
+				        grid-area: work3;
+				    }
+
+				    &--4 {
+				        grid-area: work4;
+				    }
+				    
+				    &--5 {
+				        grid-area: work5;
+				    }
+				    
+				    &--6 {
+				        grid-area: work6;
+				    }
+				    
+				    &--7 {
+				        grid-area: work7;
+				    }
+				    
+				    &--8 {
+				        grid-area: work8;
+				    }
+				    
+				    &--9 {
+				        grid-area: work9;
+				    }
+			    }
+			    &__img {
+			        height: 100%;
+			        max-width: initial;
+			    }
+			    &__link {
+			        display: flex;
+			        align-items: center;
+			        justify-content: center;
+			        height: 100%;
+			        width: 100%;
+			    }
+			    &__paragraph {
+			        position: absolute;
+			        margin: 0;
+			        display: none;
+			    }
+		    }
+	    }
+    }
+
+    /* DETAIL */
+    #detail {
+	    .mainSection {
+		    .imageWrap {
+		        height: 300px;
+		        display: flex;
+		        align-items: center;
+		    }
+	    }
+    }
+
+    /* ABOUT */
+    #about {
+	    main {
+		    .mainImage {
+		        height: 500px;
+		    }
+		    .aboutList {
+			    &__item {
+			        display: flex;
+			        align-items: center;
+				    .textWrap {
+				        width: 60%;
+				        padding-right: $margin;
+				    }
+				    .imageWrap {
+				        margin-top: 0;
+				        width: 40%;
+					    &:hover {
+					        transform: scale(1.05) translate(10px, 0);
+					    }
+				    }
+				    &:nth-child(2n+2) {
+					    .textWrap {
+					        margin-left: $margin;
+					        margin-right: 0;
+					        order: 1;
+					    }
+					    .imageWrap {
+					        &:hover {
+						        transform: scale(1.05) translate(-10px, 0);
+						    }
+					    }
+				    }
+			    }
+		    }
+	    }
+    }
+
+    /* CONTACT */
+    .contact {
+    	.container {
+		    .imageWrap {
+		    	height: 100%;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				.logoCss {
+					top: 60px;
+					transform: scale(1);
+					left: 0;
+				}
+		    }
+		}
+	    form {
+	        margin-top: 0;
+	    }
+    }
+
+    /* ERROR */
+    .error {
+    	.container {
+    		.imageWrap {
+    			.logoCss {
+    				transform: scale(1) rotate(45deg) !important;
+    				margin-left: 0;
+    			}
+    		}
+    	}
+    }
+
+}

@@ -1,0 +1,19 @@
+
+/* ERROR 404 */
+.error {
+	@extend .contact;
+	main {
+		background-color: $white;
+		height: 100%;
+	}
+	.container {
+		align-items: center;
+		.imageWrap {
+			.logoCss {
+				transform: scale(.5) rotate(45deg) !important;
+				mix-blend-mode: luminosity;
+				margin-left: -15px;
+			}
+		}
+	}
+}

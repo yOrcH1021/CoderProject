@@ -1,0 +1,14 @@
+
+/* FOOTER */
+.footerBlock {
+    background-color: $black;
+    display: flex;
+    padding: 0 $number;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+	&__item {
+	    color: $white;
+	}
+}

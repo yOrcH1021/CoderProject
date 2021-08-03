@@ -1,0 +1,27 @@
+
+/* CONTACT */
+.contact {
+	main {
+	    background-color: $blue-alternative;
+	}
+	.container {
+		display: flex;
+		section {
+		    @include main();
+		    width: 100%;
+		}
+	}
+	form {
+	    margin-top: 32px;
+		div {
+		    margin-bottom: 16px;
+		    width: 100% !important;
+		}
+		.buttonWrap {
+		    display: flex;
+		    align-items: center;
+		    margin-top: 16px !important;
+		    margin-bottom: 0; 
+		}
+	}
+}

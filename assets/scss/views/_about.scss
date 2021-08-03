@@ -1,0 +1,41 @@
+
+/* ABOUT */
+#about {
+	main {
+	    flex-direction: column;
+	    align-items: center;
+		.mainImage {
+		    justify-content: center;
+		    align-items: center;
+		    position: relative;
+		    height: 200px;
+		    overflow: hidden;
+		    display: flex;
+		    width: 100%;
+			div {
+			    top: 0;
+			    position: absolute;
+			    height: 100%;
+			    display: flex;
+			    align-items: center;
+			    justify-content: center;
+			    flex-direction: column;
+			    padding: 0 25%;
+			    text-align: center;
+			    h1, p {
+				    background: white;
+				    padding: 0 $number;
+			    }
+			}
+		}
+		.aboutList {
+		    margin-top: $margin;
+			&__item {
+			    margin-bottom: $margin;
+				.imageWrap {
+				    margin-top: 16px;
+				}
+			}
+		}
+	}
+}

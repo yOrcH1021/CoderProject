@@ -1,0 +1,51 @@
+
+@import 'utilities/variables';
+@import 'utilities/mixins';
+@import 'utilities/logo';
+@import 'general';
+@import 'layout/header';
+@import 'main';
+@import 'views/home';
+@import 'views/work';
+@import 'views/detail';
+@import 'views/about';
+@import 'views/contact';
+@import 'views/error';
+@import 'layout/footer';
+
+/* CLASSES */
+.checkbox {
+    min-height: $number;
+}
+.button {
+    border: 1px solid $black;
+    background-color: transparent;
+    text-decoration: none;
+    display: inline-block;
+    padding: ($number - 1) $number+7;
+    font-size: 16px;
+    color: $black;
+    border-radius: 0;
+    z-index: 1;
+    &:hover {
+        background-color: $black;
+        color: $white;
+    }
+}
+.imageWrap {
+    img {
+        max-width: 100%;
+    }
+}
+.form-check {
+    display: flex;
+    justify-content: center;
+}
+.form-check-label {
+    margin-left: $number;
+}
+.container {
+    padding: 0 $number;
+}
+
+@import 'media';

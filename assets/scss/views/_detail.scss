@@ -1,0 +1,24 @@
+
+/* DETAIL */
+#detail {
+	main {
+	    flex-direction: column;
+	    align-items: center;
+		.container {
+		    margin: 32px 0;
+			section {
+				.imageWrap {
+					img {
+					    margin-top: 5px;
+					}
+				}
+			}
+		}
+	}
+	.mainSection {
+		.imageWrap {
+		    height: 200px;
+		    overflow: hidden;
+		}
+	}
+}
