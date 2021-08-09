@@ -27,13 +27,6 @@
 	    }
     }
 
-    /* FOOTER */
-    .footerBlock {
-        justify-content: space-between;
-        flex-direction: row;
-        height: 50px;
-    }
-
 }
 
 @media only screen and (min-width: 992px) {
@@ -50,6 +43,15 @@
         margin-bottom: 0;
     }
 
+    /* LOGO */
+    .logoCss {
+    	+ span {
+			width: 218px;
+			height: 30px;
+			top: 40px;
+    	}
+    }
+
     /* HOME */
     #home {
 	    .container {
@@ -63,9 +65,7 @@
 				align-items: center;
 				justify-content: center;
 				.logoCss {
-					top: 60px;
 					transform: scale(1);
-					left: 0;
 					&:hover {
 						transform: rotate(15deg);
 						.hand {
@@ -85,9 +85,7 @@
     #work {
 	    .container {
 	    	section {
-		    	&:first-child {
-					height: calc(100vh - 150px);
-	    		}
+		    	height: auto;
 			}
 		    .workList {
 		        margin-top: 0;
@@ -173,10 +171,49 @@
 		    .imageWrap {
 		        height: 300px;
 		        display: flex;
-		        align-items: center;
+		        align-items: flex-start;
 		    }
 	    }
+	    .container {
+	    	ul {
+	    		margin: 0;
+	    		padding: 0;
+	    		ul {
+		    		display: grid;
+		    		grid-gap: 2px;
+			        grid-template-columns: repeat(2, 1fr);
+			        grid-template-rows: repeat(1, 1fr);
+			        grid-template-areas: " work1 work2 ";
+			        margin-bottom: 15px;
+	                li {
+	                	&:nth-child(1) {
+	                		grid-area: work1;
+	                	}
+	                	&:nth-child(2) {
+	                		grid-area: work2;
+	                	}
+	                }
+	    		}
+	    		.imageWrap {
+	    			img {
+						margin-bottom: 15px;
+					}
+					&:first-child {
+						img {
+							margin-top: 15px;
+						}
+					}
+					&:last-child {
+						img {
+							margin-bottom: 0 !important;
+						}
+					}
+	    		}
+	    	}
+	    }
     }
+
+    // #detail .container ul .imageWrap:last-child img
 
     /* ABOUT */
     #about {
@@ -225,7 +262,6 @@
 				align-items: center;
 				justify-content: center;
 				.logoCss {
-					top: 60px;
 					transform: scale(1);
 					left: 0;
 				}
@@ -243,8 +279,29 @@
     			.logoCss {
     				transform: scale(1) rotate(45deg) !important;
     				margin-left: 0;
+    				+ span {
+    					margin-top: -60px;
+    					left: 0;
+    				}
     			}
     		}
+    	}
+    }
+
+    /* FOOTER */
+    .footerBlock {
+	    .container {
+	        form {
+	            button {
+	            	padding: 0 20px;
+	            }
+	        }
+	    }
+	    &__top {
+        	p { flex-direction: row; }
+	    }
+    	&__list {
+    		display: flex;
     	}
     }
 

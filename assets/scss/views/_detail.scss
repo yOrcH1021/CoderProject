@@ -6,10 +6,31 @@
 	    align-items: center;
 		.container {
 		    margin: 32px 0;
-			section {
-				.imageWrap {
+		}
+	}
+	.container {
+		ul {
+			margin: 0;
+			padding: 0;
+			.imageWrap {
+				img {
+				    margin-bottom: 5px;
+				}
+				&:first-child {
 					img {
-					    margin-top: 5px;
+						margin-top: 5px;
+					}
+				}
+				&:last-child {
+					img {
+						margin-bottom: 0;
+					}
+				}
+			}
+			ul {
+				li {
+					img {
+						margin-bottom: 5px !important;
 					}
 				}
 			}

@@ -1,12 +1,14 @@
 
 /* HEADER */
 header {
-    background-color: $white;
     position: sticky;
     padding: 0 16px;
     height: 50px;
     z-index: 2;
     top: 0;
+    &.scrollTop {
+    	background-color: $white;
+    }
 	.navbar {
     	padding: 0;
     	.container-fluid {
@@ -82,6 +84,9 @@ header {
 			}
 			&--active {
 			    color: $blue;
+			    &:hover {
+				    color: $blue;
+				}
 			}
 		}
 	}

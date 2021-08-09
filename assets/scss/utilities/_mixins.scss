@@ -14,8 +14,16 @@
         margin-top: 32px;
     }
     .imageWrap {
+        position: relative;
         text-align: left;
         padding-left: 0;
+        flex-direction: column;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    + section {
+        padding-bottom: 0
     }
     @if $order == right {
         .textWrap {
@@ -25,6 +33,9 @@
     }
     @media only screen and (min-width: 992px) {
         flex-direction: row;
+        min-height: 686px;
+        height: 100%;
+        padding-bottom: 100px;
         > div {
             width: 50%;
         }

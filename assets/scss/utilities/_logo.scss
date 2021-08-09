@@ -46,9 +46,16 @@
 	display: inline-flex;
 	position: relative;
 	z-index: 1;
-	left: 10px;
-	top: 30px;
     transform: scale(.5);
+    margin-top: 32px;
+    + span {
+    	border-radius: 100%;
+    	background-color: $black;
+		width: 125px;
+		height: 20px;
+		position: relative;
+		top: -40px;
+    }
 	* {
 		border-radius: 100%;
 	}
@@ -145,6 +152,16 @@
 				top: -29px;
 			}
 		}
+		+ .hair {
+			z-index: 2;
+			transform: rotate(180deg);
+			> div {
+				&:nth-child(8) {
+					top: -25px;
+					height: 210px;
+				}
+			}
+		}
 	}
 	.head {
 		position: relative;
@@ -161,135 +178,135 @@
 			display: flex;
     		align-items: flex-end;
     		justify-content: center;
-			.face__shade {
+			&__shade {
 				background-color: $skin-shade;
     			height: 248px;
     			width: 250px;
     			overflow: hidden;
-    			.face__skin {
-					background-color: $skin;
-    				width: 255px;
-    				height: 255px;
-					margin-top: -27px;
-					margin-left: 7px;
-					.eyebrow {
-						animation-name: blink2;
-						animation-iteration-count: infinite;
-  						animation-duration: 10s;
-						position: absolute;
+			}
+			&__skin {
+				background-color: $skin;
+				width: 255px;
+				height: 255px;
+				margin-top: -27px;
+				margin-left: 7px;
+				.eyebrow {
+					animation-name: blink2;
+					animation-iteration-count: infinite;
+					animation-duration: 10s;
+					position: absolute;
+					background-color: $black;
+					width: 124px;
+					height: 124px;
+				    left: 77px;
+				    top: 64px;
+				    > div {
+						width: 128px;
+						height: 128px;
+				    	background-color: $skin;
+				    	position: relative;
+						top: 5px;
+						left: -2px;
+				    }
+				}
+				.closed-eye {
+					left: 115px;
+					top: 85px;
+					width: 48px;
+					height: 48px;
+					position: absolute;
+					z-index: 1;
+					span {
+						font-size: 48px;
+					}
+				}
+				.eye {
+					animation-name: blink;
+					animation-iteration-count: infinite;
+					animation-duration: 10s;
+					background-color: $white;
+					width: 100px;
+					height: 100px;
+					position: absolute;
+					top: 74px;
+					left: 89px;
+					z-index: 1;
+					border: 5px solid $black;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					> div {
 						background-color: $black;
-						width: 124px;
-						height: 124px;
-					    left: 77px;
-					    top: 64px;
-					    > div {
-							width: 128px;
-							height: 128px;
-					    	background-color: $skin;
-					    	position: relative;
-							top: 5px;
-							left: -2px;
-					    }
+						width: 8px;
+						height: 8px;
+						border-radius: 100%;
 					}
-					.closed-eye {
-						left: 115px;
-						top: 85px;
-						width: 48px;
-						height: 48px;
-						position: absolute;
-						z-index: 1;
-						span {
-							font-size: 48px;
-						}
-					}
-					.eye {
-						animation-name: blink;
-						animation-iteration-count: infinite;
-  						animation-duration: 10s;
-						background-color: $white;
-						width: 100px;
-						height: 100px;
-						position: absolute;
-						top: 74px;
-						left: 89px;
-						z-index: 1;
-						border: 5px solid $black;
+				}
+				.nose-shade {
+					background-color: $skin-shade;
+					border-radius: 100%;
+					content: '';
+					position: absolute;
+					z-index: 1;
+					width: 79px;
+					height: 79px;
+					left: 85px;
+				    top: 131px;
+				}
+        		.nose {
+        			width: 79px;
+        			height: 79px;
+        			z-index: 1;
+        			background-color: $black;
+				    position: absolute;
+				    left: 98px;
+				    top: 131px;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+				    > div {
+						width: 79px;
+						height: 79px;
+						background-color: $black;
+						position: relative;
 						display: flex;
 						align-items: center;
 						justify-content: center;
 						> div {
-							background-color: $black;
-							width: 8px;
-							height: 8px;
-							border-radius: 100%;
-						}
-					}
-					.nose-shade {
-						background-color: $skin-shade;
-						border-radius: 100%;
-						content: '';
-						position: absolute;
-						z-index: 1;
-						width: 79px;
-						height: 79px;
-						left: 85px;
-					    top: 131px;
-					}
-	        		.nose {
-	        			width: 79px;
-	        			height: 79px;
-	        			z-index: 1;
-	        			background-color: $black;
-					    position: absolute;
-					    left: 98px;
-					    top: 131px;
-						display: flex;
-						align-items: center;
-						justify-content: center;
-					    > div {
-							width: 79px;
-							height: 79px;
-							background-color: $black;
-							position: relative;
-							display: flex;
-							align-items: center;
-							justify-content: center;
+					    	width: 68px;
+					    	height: 68px;
+					    	background-color: $skin;
+					    	position: relative;
+							top: -3px;
+						    display: flex;
+						    align-items: center;
+						    justify-content: center;
 							> div {
-						    	width: 68px;
-						    	height: 68px;
-						    	background-color: $skin;
-						    	position: relative;
-								top: -3px;
-							    display: flex;
-							    align-items: center;
-							    justify-content: center;
-								> div {
-									width: 64px;
-									height: 64px;
-									overflow: hidden;
-									position: relative;
-									background-color: $skin-shade;
-									.nose__shadeIn {
-										width: 100%;
-										height: 100%;
-										background-color: $skin;
-										position: relative;
-										top: -8px;
-										left: 4px;
-									}
-									.nose__brightness {
-										width: 100%;
-										height: 100%;
-										background-color: $white;
-										position: absolute;
-										top: -45px;
-										left: 35px;
-									}
-								}
-						    }
+								width: 64px;
+								height: 64px;
+								overflow: hidden;
+								position: relative;
+								background-color: $skin-shade;
+							}
 					    }
-	        		}
-    			}
+				    }
+					&__shadeIn {
+						width: 100%;
+						height: 100%;
+						background-color: $skin;
+						position: relative;
+						top: -8px;
+						left: 4px;
+					}
+					&__brightness {
+						width: 100%;
+						height: 100%;
+						background-color: $white;
+						position: absolute;
+						top: -45px;
+						left: 35px;
+					}
+        		}
 			}
 		}
 	}

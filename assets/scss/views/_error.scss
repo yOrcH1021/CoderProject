@@ -4,15 +4,23 @@
 	@extend .contact;
 	main {
 		background-color: $white;
+		align-items: center;
 		height: 100%;
 	}
 	.container {
-		align-items: center;
+		height: fit-content;
+		section {
+			padding: 0;			
+		}
 		.imageWrap {
 			.logoCss {
 				transform: scale(.5) rotate(45deg) !important;
 				mix-blend-mode: luminosity;
 				margin-left: -15px;
+				+ span {
+					margin-top: -40px;
+					left: -10px;
+				}
 			}
 		}
 	}

@@ -1,7 +1,8 @@
 
 /* MAIN */
 main {
-    height: calc(100% - 150px);
+    height: 100%;
     display: flex;
     justify-content: center;
+    overflow: hidden;
 }

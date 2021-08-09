@@ -3,8 +3,21 @@
 #home {
 	.container {
 		display: flex;
+		flex-direction: column;
         section {
             @include main();
+            + section {
+            	position: relative;
+            	&:before {
+            		background-image: url(../../img/home/grid.png);
+					background-position: 10px -25px;
+            		content: '';
+					position: absolute;
+					width: 200%;
+					height: 100%;
+					left: -50%;
+            	}
+            }
         }
     }
 }
