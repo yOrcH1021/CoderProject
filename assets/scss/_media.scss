@@ -55,6 +55,19 @@
     /* HOME */
     #home {
 	    .container {
+	    	.sketch {
+	    		> div {
+	                img {
+	                    width: auto;
+	                }
+	                + div {
+	                    margin-top: 0;
+	                    img {
+	                    	top: 0;
+	                    }
+	                }
+	            }
+	    	}
 		    .imageWrap {
 		        margin-bottom: 0;
 		        overflow: hidden;
