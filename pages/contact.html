@@ -49,46 +49,27 @@
                 <div class="textWrap">
                     <h1>Contact</h1>
                     <p>Este es un fomulario de contacto, para tener una experiencia mas cercana, por favor llenar todos los campos</p>
-                    <!-- <form>
-                        <div>
-                            <label for="name" class="form-label">Nombre</label>
-                            <input type="text" class="form-control" id="name" aria-describedby="emailHelp">
-                        </div>
-                        <div>
-                            <label for="email" class="form-label">Correo</label>
-                            <input type="email" class="form-control" id="email">
-                        </div>
-                        <div>
-                            <label for="comments" class="form-label">Comentarios</label>
-                            <textarea class="form-control" id="comments" name="comments" rows="4" cols="50"></textarea>
-                        </div>
-                        <div class="form-check">
-                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                            <label class="form-check-label" for="exampleCheck1">Acepto el tratamiento de datos</label>
-                        </div>
-                        <button type="submit" class="button" data-bs-toggle="tooltip" data-bs-placement="right" title="Enviar formulario de contacto">Enviar</button>
-                    </form> -->
                     <form class="needs-validation" novalidate>
                         <div>
                             <label for="validationCustom01" class="form-label">Nombre</label>
                             <input type="text" class="form-control" id="validationCustom01" required>
-                            <div class="valid-feedback">Looks good!</div>
+                            <div class="invalid-feedback">Escribe tu nombre por favor.</div>
                         </div>
                         <div>
                             <label for="validationCustom02" class="form-label">Correo</label>
                             <input type="email" class="form-control" id="validationCustom02" required>
-                            <div class="valid-feedback">Looks good!</div>
+                            <div class="invalid-feedback">Escribe tu correo.</div>
                         </div>
                         <div>
                             <label for="validationTextarea" class="form-label">Comentarios</label>
                             <textarea class="form-control" id="validationTextarea" rows="4" cols="50" required></textarea>
-                            <div class="invalid-feedback">Please enter a message in the textarea.</div>
+                            <div class="invalid-feedback">Escribe tus comentarios aqui.</div>
                         </div>
                         <div>
                             <div class="form-check">
                                 <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
                                 <label class="form-check-label" for="invalidCheck">Acepto el tratamiento de datos</label>
-                                <div class="invalid-feedback">You must agree before submitting.</div>
+                                <div class="invalid-feedback">Ups, te falto algo.</div>
                             </div>
                         </div>
                         <button class="button" type="submit">Enviar</button>
