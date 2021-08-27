@@ -1,7 +1,7 @@
 /* COLORS */
 /* VARIABLES */
 /* LOADING */
-#cargando {
+#loading {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -12,7 +12,7 @@
   align-items: center;
   justify-content: center;
 }
-#cargando.qwerty {
+#loading.hide {
   opacity: 0;
   pointer-events: none;
 }
