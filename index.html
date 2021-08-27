@@ -243,7 +243,9 @@
     <!-- Loading Javascript -->
     <script>
         $(window).load(function () {
-          $('#loading').addClass('hide');
+            setTimeout(function(){
+                $('#loading').addClass('hide');
+            }, 500);
         });
     </script>
 
